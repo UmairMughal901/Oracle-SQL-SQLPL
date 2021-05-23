@@ -1,0 +1,29 @@
+---function header
+create or replace function square_area(len number, bred number)
+return number is
+--declare variables
+--len number(7,2);
+--bred number(7,2);
+area number(7,2);
+---Area of square
+Begin
+area := len * bred;
+return area;
+end;
+/
+
+Drop function SUQUARE_AREA;
+
+select SQUARE_AREA(7,4) as area from dual;
+
+--Function Header
+CREATE OR REPLACE FUNCTION circle_area (radius NUMBER) 
+RETURN NUMBER IS
+--Declare a constant and a variable
+pi      CONSTANT NUMBER(7,2) := 3.141;
+area    NUMBER(7,2);
+BEGIN
+  --Area of Circle pi*r*r;
+  area := pi * (radius * radius);
+  RETURN area; 
+END;
